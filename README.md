@@ -16,7 +16,7 @@ Roadmap
 * Create MYOB Essentials Live Schema and initial SDK's
 * Create QuickBooks Online Schema and initial SDK's
 
-### Sprint #2
+### Sprint #3
 * Create Saasu Schema and initial SDK's
 * Create Freshbooks Schema and initial SDK's
 
