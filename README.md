@@ -1,7 +1,7 @@
 (All of the) Accounting API SDK's
 ===============
 
-Here you will find the API Schema (in Apitmatic.io format) and client SDK's for each accounting API (compiled by Apitmatic.io).
+Here you will find the API Schema (in Apimatic.io format) and client SDK's for each accounting API (compiled by Apimatic.io).
 
 The goal of this project is to invite and maintain Accounting Software API's in one location, giving developers and integrators a simple place to start when they want to connect with a new accounting package.
 
