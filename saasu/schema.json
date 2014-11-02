@@ -1,0 +1,144 @@
+{
+    "CustomTypes": [
+        {
+            "Name": "CarInfo",
+            "ImplementationType": "Structure",
+            "Description": "Car information model",
+            "Fields": [
+                {
+                    "Type": "Number",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "Model",
+                    "Description": "model of the car",
+                    "DefaultValue": "2014"
+                },
+                {
+                    "Type": "String",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "Make",
+                    "Description": "make brand of the car"
+                },
+                {
+                    "Type": "String",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "RegNo",
+                    "Description": "registration number of the car"
+                }
+            ]
+        },
+        {
+            "Name": "CarTypes",
+            "ImplementationType": "Enumeration",
+            "Description": "Types of all cars",
+            "Fields": [
+                {
+                    "Type": "Number",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "Sedan"
+                },
+                {
+                    "Type": "Number",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "Hatchback"
+                },
+                {
+                    "Type": "Number",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "Beetle"
+                }
+            ]
+        }
+    ],
+    "Endpoints": [
+        {
+            "Name": "GetCarInfo",
+            "HTTPMethod": "GET",
+            "Group": "Group1",
+            "RequiresAuthentication": false,
+            "Route": "/carinfo",
+            "Response": {
+                "Type": "CarInfo",
+                "Constant": false,
+                "IsArray": false,
+                "Name": "response"
+            },
+            "HasOptionalQueryParams": true,
+            "HasOptionalFieldParams": false,
+            "Parameters": [
+                {
+                    "Optional": false,
+                    "ParamFormat": "Query",
+                    "Type": "String",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "RegNo"
+                },
+                {
+                    "Optional": true,
+                    "ParamFormat": "Query",
+                    "Type": "String",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "Color"
+                },
+                {
+                    "Optional": true,
+                    "ParamFormat": "Query",
+                    "Type": "CarTypes",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "CartType"
+                }
+            ]
+        },
+        {
+            "Name": "UpdateCarInfo",
+            "HTTPMethod": "POST",
+            "Group": "Group1",
+            "RequiresAuthentication": false,
+            "Route": "/carinfo",
+            "Response": {
+                "Type": "Boolean",
+                "Constant": false,
+                "IsArray": false,
+                "Name": "response"
+            },
+            "HasOptionalQueryParams": false,
+            "HasOptionalFieldParams": true,
+            "Parameters": [
+                {
+                    "Optional": false,
+                    "ParamFormat": "Form",
+                    "Type": "String",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "NewOwner",
+                    "Description": "The new owner of this car"
+                },
+                {
+                    "Optional": false,
+                    "ParamFormat": "Form",
+                    "Type": "Number",
+                    "Constant": false,
+                    "IsArray": false,
+                    "Name": "Odometer",
+                    "Description": "Current kilometers reading from odometer"
+                }
+            ]
+        }
+    ],
+    "ImageUri": "http://www.clker.com/cliparts/6/f/d/8/1194985166350909057road_runner_ganson.svg.med.png",
+    "Name": "Car Information API",
+    "BaseUri": "http://carinfo.acme.com/",
+    "Authentication": {
+        "Type": "Basic",
+        "AuthType": "Basic"
+    },
+    "ModelSerializationScheme": "Json"
+}
